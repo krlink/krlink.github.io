@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRAKEN | Лучший маркетплейс</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .container {
+            text-align: center;
+            z-index: 10;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 150, 200, 0.5);
+            max-width: 90%;
+        }
+        
+        .logo-container {
+            margin: 20px 0;
+            transform: scale(2.5); /* Увеличение логотипа в 2.5 раза */
+        }
+        
+        .title {
+            font-size: 2.8rem;
+            margin: 25px 0;
+            background: linear-gradient(45deg, #aaa, #000, #444, #222);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 4s ease infinite, pulse 3s ease-in-out infinite;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            letter-spacing: 1.5px;
+        }
+        
+        .url {
+            font-size: 1.8rem;
+            color: #00a8ff;
+            margin: 15px 0;
+            text-shadow: 0 0 10px rgba(0, 168, 255, 0.7);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .floating-text {
+            position: absolute;
+            font-size: 2.8rem;
+            font-weight: bold;
+            text-align: center;
+            animation: float 15s infinite ease-in-out, gradient 4s infinite alternate;
+            padding: 15px 25px;
+            z-index: 5;
+            background: linear-gradient(45deg, #333, #000, #555, #222);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-radius: 10px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            opacity: 0.9;
+            letter-spacing: 1.5px;
+        }
+        
+        .message {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            color: #ccc;
+            animation: fade 5s infinite;
+        }
+        
+        /* Анимации */
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(calc(100vw - 400px), 40vh) rotate(5deg);
+            }
+            50% {
+                transform: translate(calc(100vw - 400px), calc(100vh - 200px)) rotate(0deg);
+            }
+            75% {
+                transform: translate(0, calc(100vh - 200px)) rotate(-5deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(0, 168, 255, 0.7);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(0, 168, 255, 1), 0 0 30px rgba(0, 168, 255, 0.8);
+            }
+        }
+        
+        @keyframes fade {
+            0% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.7;
+            }
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            .url {
+                font-size: 1.4rem;
+            }
+            .floating-text {
+                font-size: 1.8rem;
+            }
+            .logo-container {
+                transform: scale(1.8);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.6rem;
+            }
+            .url {
+                font-size: 1.1rem;
+            }
+            .floating-text {
+                font-size: 1.4rem;
+            }
+            .logo-container {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Плавающий текст -->
+    <div class="floating-text">KRAKEN - лучший маркетплейс! URL: kra41.art</div>
+    
+    <!-- Основной контент -->
+    <div class="container">
+        <h1 class="title">KRAKEN - лучший маркетплейс!</h1>
+        
+        <div class="logo-container">
+            <svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <title>Логотип Kraken</title>
+                    <path d="m74.5,166.5l-9.2,0l-5.7,-11.2l-2,0l0,11.2l-7.8,0l0,-28l7.8,0l0,10.7l2.1,0l5.7,-10.7l8.7,0l-7.5,13.3l7.9,14.7z" fill="white"></path>
+                    <path d="m98.5,147.6c0,1.7 -0.3,3.3 -1.1,4.8c-0.7,1.3 -1.7,2.3 -3.1,2.9l6,11.3l-9,0l-4.1,-9.7l-2.8,0l0,9.7l-7.7,0l0,-28l10.6,0c3.7,0 6.5,0.7 8.4,2.2c1.9,1.5 2.8,3.8 2.8,6.9zm-8.1,0.3c0.1,-0.9 -0.1,-1.8 -0.7,-2.5c-0.7,-0.5 -1.5,-0.8 -2.4,-0.7l-2.9,0l0,6.4l2.8,0c0.9,0.1 1.7,-0.1 2.5,-0.7c0.5,-0.8 0.8,-1.7 0.7,-2.6z" fill="white"></path>
+                    <path d="m119.2,166.5l-1.2,-4.8l-8.6,0l-1.2,4.8l-8.2,0l9.2,-28l9.2,0l9.3,28l-8.6,0zm-5.5,-21.8l-0.7,2.9l-2,7.8l5.4,0l-1.9,-7.8l-0.7,-2.9l-0.1,-0.1z" fill="white"></path>
+                    <path d="m154.5,166.5l-9.2,0l-5.7,-11.2l-2.1,0l0,11.2l-7.7,0l0,-28l7.7,0l0,10.7l2.2,0l5.7,-10.7l8.7,0l-7.4,13.3l7.9,14.7z" fill="white"></path>
+                    <path d="m164.5,160l12,0l-0.1,6.5l-19.5,0l0,-28l19,0l0.1,6.6l-11.4,0l0,4.1l9.5,0l0,6l-9.5,0l0,4.8z" fill="white"></path>
+                    <path d="m202.7,166.5l-5.4,0l-9.2,-12.9l-1.7,-2.5l-0.1,0l0,3l0,12.3l-6.9,0l0,-27.9l6.4,0l8.3,12l1.7,2.5l0.1,0l-0.1,-2.9l0,-11.6l6.8,0l0.1,28z" fill="white"></path>
+                    <path d="m150,121l22.5,0l-5.7,-22.7l-14.6,-12.5l1.5,8.7l5,3.8l0,7.6l-8.7,15.1z" fill="white"></path>
+                    <path d="m133.3,104.5l13.8,0l-0.3,-21.8l-14.2,-10.3l0,-8.3l-5.6,11.2l11.9,10.8l-5.7,18.5z" fill="white"></path>
+                    <path d="m117.8,57.2l-27.2,18.3l10.9,14.7l-29.1,38.6l45.1,0l9.3,-41.3l-16.1,-15.6l7.2,-14.7l0,0z" fill="white"></path>
+                </g>
+                <g>
+                    <title>Круговая анимация</title>
+                    <circle opacity="0.5" r="110" cy="125" cx="125" stroke-width="10" stroke="#00a8ff" fill="none"></circle>
+                    <circle class="rotating-circle" r="15" cy="135" cx="20" stroke-width="8" stroke="#aaa" fill="#00a8ff"></circle>
+                </g>
+            </svg>
+        </div>
+        
+        <div class="url">URL: kra41.art</div>
+        
+        <div class="message">Крупнейший маркетплейс с лучшими предложениями</div>
+    </div>
+
+    <script>
+        // Динамическое создание нескольких плавающих текстов
+        function createFloatingTexts() {
+            const texts = [
+                "KRAKEN - лучший маркетплейс!",
+                "URL: kra41.art",
+                "Низкие цены ✓",
+                "Широкий ассортимент ✓",
+                "Быстрая доставка ✓",
+                "Надежные шопы ✓"
+            ];
+            
+            const container = document.body;
+            
+            texts.forEach((text, index) => {
+                const floatingText = document.createElement('div');
+                floatingText.className = 'floating-text';
+                floatingText.textContent = text;
+                floatingText.style.animationDelay = `${index * 2}s`;
+                floatingText.style.fontSize = `${1.8 + Math.random() * 1.5}rem`;
+                floatingText.style.left = `${Math.random() * 70}%`;
+                floatingText.style.top = `${Math.random() * 70}%`;
+                container.appendChild(floatingText);
+            });
+        }
+        
+        // Запуск создания плавающих текстов после загрузки страницы
+        window.addEventListener('load', createFloatingTexts);
+        
+        // Анимация для вращающегося круга
+        document.addEventListener('DOMContentLoaded', function() {
+            const rotatingCircle = document.querySelector('.rotating-circle');
+            setInterval(() => {
+                rotatingCircle.style.fill = `hsl(${Math.random() * 360}, 70%, 60%)`;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
